@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\wfrv74\\Documents\\HTML\\Blog.html"
+            "file": "html5practice.html"
         }
     ]
 }
