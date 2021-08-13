@@ -2,10 +2,19 @@
 <html>
     <head>
         <title>First Page!</title>
+        <style>
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                border: 5px solid khaki;
+            }
+        </style>
     </head>
-    <body>
+    <body bgcolor="#435f73">
         <!-- Different types of headers -->
-        <h1>Types of Headings:</h1>
+        <h1 align="center">Types of Headings:</h1>
         <hr>
         <h1>This is heading 1</h1>
         <h2>This is heading 2</h2>
@@ -13,19 +22,19 @@
         <h4>This is heading 4</h4>
         <h5>This is heading 5</h5>
         <h6>This is heading 6</h6>
-        <!-- EoS (End of Section) -->
-        <hr>
+        <!-- EoS (End of Section) -->        
         <br><br>
 
-        <h1>Line break:</h1>        
+        <!-- Line break -->
+        <h1 align="center">Line break:</h1>        
         <hr /> 
         <!-- example of a line break -->
         <p>This is a paragraph with <br /> a line break</p>
         <!-- EoS -->
-        <hr>
         <br><br>
 
-        <h1>Formatting text:</h1>
+        <!-- Text formatting -->
+        <h1 align="center">Formatting text:</h1>
         <hr>
         <p>This is regular text</p>
         <p><b>bold text</b></p>
@@ -42,8 +51,121 @@
         <p><abbr title="You only live once">YOLO</abbr></p>
         <p>Press the <kbd>Esc</kbd> key</p>        
         <!-- EoS -->
-        <hr>
+        <br>
+
+        <!-- Attributes -->
+        <h1 align="center">Super smol line separator:</h1>
+        <hr width="50px">
         <br><br>
+
+        <h1 align="center">Half of a normal line separator justified to right:</h1>
+        <hr width="50%" align="right">
+        <br><br>
+
+        <!-- EoS -->
+        <br><br>
+
+        <!-- Images -->
+        <h1 align="center">Image:</h1>
+        <hr>
+        <a href="https://www.google.com/search?q=baywatch&rlz=1C1GCEU_en-GBPL947PL949&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi-gfam7a3yAhVxgP0HHSjbC7gQ_AUoAXoECAEQAw&biw=1842&bih=977" target="_blank">
+            <img src="c:\\Users\\wfrv74\\Pictures\\baywatch.jpg" alt="Hasslehoff - baywatch" class="center"/>
+        </a>
+        <br>
+        <div align="center">
+            <strong>Click the image :) </strong>
+        </div>
+        <!-- EoS -->
+        <br><br>
+
+        <!-- Lists -->
+        <h1 align="center">Ordered list:</h1>
+        <hr>
+        <ol>
+            <li>Red</li>
+            <li>Blue</li>
+            <li>Green</li>
+        </ol>
+
+        <h1 align="center">Unordered list:</h1>
+        <hr>
+        <ul>
+            <li>Red</li>
+            <li>Blue</li>
+            <li>Green</li>
+        </ul>
+
+        <!-- Tables -->
+        <h1 align="center">Table:</h1>
+        <hr>
+        <table border="1" align="center">
+            <!-- column span attribute -->
+            <tr>
+                <td colspan="2">Text is</td>
+                <td>here</td>
+            </tr>
+            <tr>
+                <td bgcolor="red">Red</td>
+                <td bgcolor="blue">Blue</td>
+                <td bgcolor="green">Green</td>
+            </tr>
+        </table>
+        <br>
+
+        <!-- Div as a component container and span as a text container -->
+        <h1 align="center">Containers:</h1>
+        <hr>
+        <h2 align="center">Component container: (block-level)</h2>
+        <div style="background-color: green; color: white; padding: 20px;">
+            <p>Some paragraph text goes here.</p>
+            <p>Another paragraph text here.</p>
+        </div>
+        <br>
+        <h2 align="center">Text container: (inline)</h2>
+        <h3>
+            Some
+            <span style="color: red;">Important</span>
+            Message
+        </h3>
+        <br>
+
+        <!-- Form component -->
+        <h1 align="center">Form:</h1>
+        <hr>
+
+        <h2 align="center">Login form:</h2>
+        <form action="Blog.html" method="POST">
+            <!-- Basic Login and password form -->
+            Login <br>
+            <input type="text" name="username"> <br>            
+            Password <br>
+            <input type="password" name="password"> <br><br>
+            <input type="submit" name="submit"> <br>
+        </form>
+
+        <h2 align="center">Radio button form:</h2>
+        <form action="Blog.html" method="GET">
+            <!-- Radio button form -->
+            Select your gender: <br>
+            <input type="radio" name="gender" value="male"> Male <br>            
+            <input type="radio" name="gender" value="female"> Female <br>            
+            <input type="radio" name="gender" value="other"> Other <br><br>
+            <input type="submit" name="submit">            
+        </form>
+
+        <h2 align="center">Checkbox form:</h2>
+        <form>
+            <!-- Checkbox form -->
+            <font color="#FFFFFF">
+                Select your gender: <br>
+                <input type="checkbox" name="gender" value="1"> Male <br>            
+                <input type="checkbox" name="gender" value="2"> Female <br>
+                <input type="checkbox" name="gender" value="3"> Other <br><br>
+                <input type="submit" name="submit">
+            </font>
+        </form>
+        
+        <br>
 
     </body>
 </html>
