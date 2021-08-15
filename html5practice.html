@@ -1,14 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Html5</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <h1>Most important heading</h1>
+            <h3>Less important heading</h3>
+        </header>
+
+        <hr>
+
+        <!-- NAVIGATION -->
+        <nav>            
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>        
+
+        <!-- ARTICLE -->
+        <article>
+            <h1>Welcome</h1>
+            <section>
+                <h1>Heading of a section</h1>
+                <!-- ASIDE -->
+                <aside>
+                    <p>Some text but aside</p>
+                </aside>
+                <p>Contents of the article's element</p>
+            </section>
+        </article>
+
+        <!-- AUDIO -->
+        <audio controls loop>
+            <source src="http://www.sololearn.com/uploads/audio.mp3" type="audio/mpeg">
+            <source src="http://www.sololearn.com/uploads/audio.ogg" type="audio/ogg">
+            Audio element not supported by your browser!
+        </audio>
+        <br>
+        <!-- VIDEO -->
+        <video controls loop>
+            <source src="http://www.sololearn.com/uploads/video.mp4" type="video/mp4">
+            <source src="http://www.sololearn.com/uploads/video.ogg" type="video/ogg">
+            Video element not supported by your browser!
+        </video>
+        <br>
+        <!-- PROGRESS -->
+        <progress id="progress" min="0" max="100" value="70"></progress>
+        <br>
+
+        <!-- SVG -->        
+        <svg width="500" height="500">
+            <!-- CIRCLE -->
+            <circle cx="50" cy="50" r="100" fill="red" stroke="20px"></circle>
+            <!-- RECTANGLE -->
+            <rect width="300" height="200" x="30" y="30" fill="blue"></rect>
+            <!-- LINE -->
+            <line x1="0" y1="0" x2="130" y2="130" 
+                style="stroke:black; stroke-linecap:butt; stroke-width: 10;"></line>
+            <!-- POLYLINE -->
+            <polyline style="stroke-linejoin: bevel; stroke:red; stroke-width: 10; fill:beige"
+                points="100 100, 150 150, 200 100"></polyline>
+            <!-- ELLIPSE -->
+            <ellipse cx="180" cy="225" rx="150" ry="70" style="fill:green"></ellipse>
+            <!-- POLYGON -->
+            <polygon points="300 300, 400 400, 300 500" style="fill:coral; stroke:black"></polygon>
+        </svg>
+        <br>
+
+        <!-- ANIMATING SVGs -->
+        <svg width="1000" height="250">
+            <rect width="150" height="150" fill="orange">
+                <animate attributeName="x" from="0" to="300"
+              dur="3s" fill="freeze" repeatCount="indefinite"/> 
+            </rect>
+        </svg>
+
+        <br>
+
+        <!-- PATHS -->
+
+        <svg width="300" height="300">
+            <path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000;  fill:none;" />
+        </svg>
+
+        <br>
+
+        <!-- CANVA + DRAWING -->
+        <canvas id="canvas1" width="400" height="400"></canvas> 
+        <script>
+            var can = document.getElementById("canvas1"); 
+            var ctx = can.getContext("2d");
+            // SET COLOR
+            ctx.fillStyle = "rgba(0, 200, 0, 1)"
+            // DRAW A RECTANGLE
+            ctx.fillRect(20, 20, 100, 100);
+
+            // // Draw a Line
+            // moveTo(x,y): Defines the starting point of the line.
+            // lineTo(x,y): Defines the ending point of the line.
+
+            // // Draw a Circle
+            // beginPath(): Starts the drawing.
+            // arc(x,y,r,start,stop): Sets the parameters of the circle.
+            // stroke(): Ends the drawing.
+
+            // // Gradients
+            // createLinearGradient(x,y,x1,y1): Creates a linear gradient.
+            // createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
+
+            // // Drawing Text on the Canvas
+            // Font: Defines the font properties for the text.
+            // fillText(text,x,y): Draws "filled" text on the canvas.
+            // strokeText(text,x,y): Draws text on the canvas (no fill).
+            
+            // SET COLOR
+            ctx.fillStyle = "rgba(0, 0, 200, 1)"
+
+            // CANVAS TRANSFORMATIONS
+            var canvas = document.getElementById('canvas1');
+            ctx =canvas.getContext('2d');
+            ctx.font="bold 22px Tahoma";
+            ctx.textAlign="start";
+            ctx.fillText("start", 10, 30);
+            ctx.translate(100, 150);
+            ctx.fillText("after translate", 0, 0);
+            ctx.rotate(1);
+            ctx.fillText("after rotate", 0, 0);
+            ctx.scale(1.5, 4);
+            ctx.fillText("after scale", 0,20);
+
+        </script>
+        <!-- FORM -->
+        <form autocomplete="off">
+            <label for="e-mail">Your e-mail address:</label>
+            <input name="Email" type="email" required
+            placeholder="your@email.com" autofocus />
+            <input type="reset">
+            <input type="submit">
+            <br>
+            <!-- SEARCH -->
+            <b>Search:</b><br>
+            <input id="mysearch" name="searchitem" type="search">
+            <br>
+            <!-- DATALIST -->
+            <b>Choose a car color:</b><br>
+            <input id="car" type="text" list="colors">
+            <datalist id="colors">
+                <option value="Red"></option>
+                <option value="Green"></option>
+                <option value="Yellow"></option>                
+            </datalist>
+            <input type="submit" id="car">            
+        </form>
+        <form>
+            <!-- Specific inputs -->
+            <br><br><br>
+            Input some info: <br>
+            <input id="email" name="email" type="email" placeholder="example@example.com" />
+            <br />
+            <input id="url" name="url" type="url" placeholder="example.com" />
+            <br />
+            <input id="tel" name="tel" type="tel" placeholder="555.555.1211" />
+            <br>
+            <input type="submit">            
+            <input type="reset">
+            <br>
+        </form>
+
+        <hr>
+
+        <!-- FOOTER -->
+        <footer>Foot guys? 🤨🤨</footer>
+
+    </body>
 </html>
 
 <!--  SOME TAGS INTRODUCED IN HTML5
